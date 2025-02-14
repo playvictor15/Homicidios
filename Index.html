@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div id="menu">
-        <h1>Jogo de Investigação</h1>
-        <button onclick="escolherPersonagem('assassino')">Jogar como Assassino</button>
-        <button onclick="escolherPersonagem('detetive')">Jogar como Detetive</button>
+    <div id="game">
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        <button onclick="entrarNoJogo(document.getElementById('nome').value)">Entrar</button>
+        <div id="info"></div>
+        <div id="chat-box">
+            <div id="chat"></div>
+            <input type="text" id="mensagem" placeholder="Digite sua mensagem">
+            <button onclick="enviarMensagem()">Enviar</button>
+        </div>
+        <div id="dicas-box">
+            <input type="text" id="dica" placeholder="Envie uma dica para o Detetive">
+            <button onclick="enviarDica()">Enviar Dica</button>
+        </div>
+        <div id="pistas-box">
+            <h3>Pistas da Investigação</h3>
+            <ul id="pistas-list"></ul>
+        </div>
+        <p id="timer">Tempo restante: --s</p>
     </div>
-
-    <div id="game" class="hidden">
-        <h2 id="role"></h2>
-        <p id="info"></p>
-        <button onclick="iniciarJogo()">Iniciar Jogo</button>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
