@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Investigação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="menu">
+        <h1>Jogo de Investigação</h1>
+        <button onclick="escolherPersonagem('assassino')">Jogar como Assassino</button>
+        <button onclick="escolherPersonagem('detetive')">Jogar como Detetive</button>
+    </div>
+
+    <div id="game" class="hidden">
+        <h2 id="role"></h2>
+        <p id="info"></p>
+        <button onclick="iniciarJogo()">Iniciar Jogo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
